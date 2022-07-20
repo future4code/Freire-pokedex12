@@ -5,6 +5,6 @@ export default function Home () {
 
     return <div>
         <p>Home</p>
-        <Card nome={'Bulbasaur'} numero={'01'} tipo={[{type: 'Poison'}, {type: 'Grass'}]} imagem={bulbaImagem} />
+        <Card nome={'Bulbasaur'} numero={'01'} tipo={[{type: 'Grass'}, {type: 'Poison'}]} imagem={bulbaImagem} />
     </div>
 }

@@ -1,11 +1,11 @@
 import { CardPokemon, Informacao, NomePokemon, NumeroPokemon, TipoPokemon, ImagemPokemon, Botoes, ImagemPokebolaFundo } from "./styles";
-import bulbasauro from '../../img/bulbasaur.png';
+import { LabelType } from "../LabelType/LabelType";
 import fundoPokebola from '../../img/fundopokebola.png';
 
 export const Card = (props) => {
 
     const listaTipos = props.tipo.map((tipo) => {
-        return <li>{tipo.type}</li>
+        return <LabelType tipo={tipo.type}/>
     })
 
     return(
