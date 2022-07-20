@@ -29,7 +29,9 @@ export const NomePokemon = styled.div`
 `
 
 export const TipoPokemon = styled.div`
-    
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
 `
 
 export const ImagemPokemon = styled.img`
@@ -52,4 +54,5 @@ export const Botoes = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
 `
