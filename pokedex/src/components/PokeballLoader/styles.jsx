@@ -49,7 +49,7 @@ export const BallShape = styled.div`
 `;
 
 export const Pokeball = styled.div`
-  background-image: linear-gradient(#fb9898, #ff0000);
+  background-image: linear-gradient(#fb9898, #ff0033);
   width: 60px;
   height: 30px;
   border-bottom: 2px solid black;
