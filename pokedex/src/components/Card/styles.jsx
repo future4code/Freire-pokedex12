@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CardPokemon = styled.div`
-    background-color: #729F92;
+    background-color: ${(props) => props.corCard};
     width: 440px;
     height: 210px;
     border-radius: 12px;

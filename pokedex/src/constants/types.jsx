@@ -28,7 +28,7 @@ export const tiposPokemon = [
         nome: 'Dark',
         icone: iconDark,
         corEtiqueta: '#5C5365',
-        corCard: ''
+        corCard: '#342c3e'
     },
     {
         nome: 'Dragon',
@@ -40,19 +40,19 @@ export const tiposPokemon = [
         nome: 'Electric',
         icone: iconElectric,
         corEtiqueta: '#F4D23B',
-        corCard: ''
+        corCard: '#ffea4e'
     },
     {
         nome: 'Fairy',
         icone: iconFairy,
         corEtiqueta: '#EC8FE6',
-        corCard: ''
+        corCard: '#ff69f5'
     },
     {
         nome: 'Fighting',
         icone: iconFighting,
         corEtiqueta: '#CE4069',
-        corCard: ''
+        corCard: '#942f4b'
     },
     {
         nome: 'Fire',
@@ -64,13 +64,13 @@ export const tiposPokemon = [
         nome: 'Flying',
         icone: iconFlying,
         corEtiqueta: '#6892B0',
-        corCard: ''
+        corCard: '#8eb1ca'
     },
     {
         nome: 'Ghost',
         icone: iconGhost,
         corEtiqueta: '#5269AC',
-        corCard: ''
+        corCard: '#38456c'
     },
     {
         nome: 'Grass',
@@ -82,13 +82,13 @@ export const tiposPokemon = [
         nome: 'Ground',
         icone: iconGround,
         corEtiqueta: '#D97745',
-        corCard: ''
+        corCard: '#a15e3c'
     },
     {
         nome: 'Ice',
         icone: iconIce,
         corEtiqueta: '#74CEC0',
-        corCard: ''
+        corCard: '#7ebab1'
     },
     {
         nome: 'Normal',
@@ -100,25 +100,25 @@ export const tiposPokemon = [
         nome: 'Poison',
         icone: iconPoison,
         corEtiqueta: '#AD61AE',
-        corCard: ''
+        corCard: '#8a3e8b'
     },
     {
         nome: 'Psychic',
         icone: iconPsychic,
         corEtiqueta: '#F67176',
-        corCard: ''
+        corCard: '#ff545a'
     },
     {
         nome: 'Rock',
         icone: iconRock,
         corEtiqueta: '#C7B78B',
-        corCard: ''
+        corCard: '#7e6f47'
     },
     {
         nome: 'Steel',
         icone: iconSteel,
         corEtiqueta: '#BBBBBB',
-        corCard: ''
+        corCard: '#d5d5d5'
     },
     {
         nome: 'Water',

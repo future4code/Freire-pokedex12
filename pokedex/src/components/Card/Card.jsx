@@ -1,4 +1,5 @@
 import { CardPokemon, Informacao, NomePokemon, NumeroPokemon, TipoPokemon, ImagemPokemon, Botoes, ImagemPokebolaFundo } from "./styles";
+import { tiposPokemon } from '../../constants/types';
 import { LabelType } from "../LabelType/LabelType";
 import fundoPokebola from '../../img/fundopokebola.png';
 
@@ -8,8 +9,12 @@ export const Card = (props) => {
         return <LabelType tipo={tipo.type}/>
     })
 
+    const tipoEscolhido = tiposPokemon.filter((tipo) => {
+        return tipo.nome === props.tipo[0].type;
+    });
+
     return(
-        <CardPokemon>
+        <CardPokemon corCard={tipoEscolhido[0].corCard}>
             <Informacao>
                 <NumeroPokemon>#{props.numero}</NumeroPokemon>
                 <NomePokemon>{props.nome}</NomePokemon>

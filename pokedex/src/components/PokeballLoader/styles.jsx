@@ -27,7 +27,7 @@ const blinking = keyframes`
         background-color: #ff0000;
         box-shadow: 0px 0px 8px 5px #ff0000;
     }
-    1000% {
+    100% {
         background-color: #bdbdbd;
         box-shadow: 0px 0px 2px 2px #888888;
     }

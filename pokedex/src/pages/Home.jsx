@@ -8,7 +8,7 @@ export default function Home () {
     return <div>
         <Header/>
         <p>Home</p>
-        <Card nome={'Bulbasaur'} numero={'01'} tipo={[{type: 'Grass'}, {type: 'Poison'}]} imagem={bulbaImagem} />
+        <Card nome={'Bulbasaur'} numero={'01'} tipo={[{type: 'Steel'}, {type: 'Poison'}]} imagem={bulbaImagem} />
         <br />
         <br />
         <br />
