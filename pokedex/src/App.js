@@ -1,10 +1,13 @@
+import { PokedexProvider } from './globalState/PokedexProvider';
 import { Router } from './routes/Router';
 
 
 function App() {
   return (
     <div>
-      <Router/>
+      <PokedexProvider>
+        <Router/>
+      </PokedexProvider>
     </div>
   );
 }

@@ -1,17 +1,20 @@
+import { useContext } from "react";
 import { Card } from "../components/Card/Card";
 import { Header } from "../components/Header/Header";
 import PokeballLoader from "../components/PokeballLoader/PokeballLoader";
 import { URL_Base } from "../constants/URL_Base";
+import { PokedexContext } from "../globalState/PokedexContext";
 import { useRequestData } from "../hooks/useRequestData";
-import bulbaImagem from '../img/bulbasaur.png';
-import { DivCardsPokemons, BodyHome } from "./pagesStyles";
+import { DivCardsPokemons, BodyPage } from "./pagesStyles";
 
 export default function Home () {
 
-    const [links, isLoadingLinks] = useRequestData(`${URL_Base}?limit=18`);
+    const {capturarPokemon} = useContext(PokedexContext)
+    
+    const [links, isLoadingLinks] = useRequestData(`${URL_Base}?limit=10`);
     
     const listaPokemons = links && links.results.map((item, indice) => {
-        return <Card key={indice} nome={item.name} url={item.url} />
+        return <Card key={indice} nome={item.name} url={item.url} capturarPokemon={capturarPokemon} />
     });
 
     // const pokemons = listaLinks && listaLinks.map((link) => {
@@ -21,12 +24,12 @@ export default function Home () {
 
     return <div>
         <Header/>
-        <BodyHome>
+        <BodyPage>
         <h1>Todos Pokémons</h1>
         <DivCardsPokemons>
-            {listaPokemons}
+            { isLoadingLinks ? <PokeballLoader/> : listaPokemons }
         </DivCardsPokemons>
-        </BodyHome>
+        </BodyPage>
         
     </div>
 }

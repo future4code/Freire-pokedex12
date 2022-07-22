@@ -12,6 +12,7 @@ import PokeballLoader from "../PokeballLoader/PokeballLoader";
 
 export const Card = (props) => {
 
+    // Botão muda de acordo com a página
     const location = useLocation();
     let mostraCapturar = '';
     let mostraExcluir = '';
@@ -25,8 +26,6 @@ export const Card = (props) => {
             mostraCapturar = false;
             mostraExcluir = true;
     }
-
-    console.log(location)
     
     // Navegação entre páginas
     const navigate = useNavigate();
@@ -41,7 +40,6 @@ export const Card = (props) => {
     const getPokemon = () => {
         axios.get(props.url).then((response) => {
         setPokemon(response.data)
-        console.log(response.data)
     }).catch((error) => {
         console.log(error.message)
     })
@@ -80,8 +78,8 @@ export const Card = (props) => {
 
             <DivBotoes>
                 <button onClick={goToDetails}>Detalhes</button>
-                <BotaoAcao mostrar={mostraCapturar}>Capturar</BotaoAcao>
-                <BotaoAcao mostrar={mostraExcluir}>Excluir</BotaoAcao>
+                <BotaoAcao mostrar={mostraCapturar} onClick={() => props.capturarPokemon(pokemon.id)}>Capturar</BotaoAcao>
+                <BotaoAcao mostrar={mostraExcluir} onClick={() => props.excluirPokemon(pokemon.id)}>Excluir</BotaoAcao>
             </DivBotoes>
         </CardPokemon>}
         </div>

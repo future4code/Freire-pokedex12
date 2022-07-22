@@ -9,7 +9,7 @@ export const DivCardsPokemons = styled.div`
     justify-content: center;
 `;
 
-export const BodyHome = styled.div`
+export const BodyPage = styled.div`
     width: 100%;
     background-color: #5E5E5E;
     padding: 30px;
