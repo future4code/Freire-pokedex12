@@ -1,8 +1,8 @@
-import { CardPokemon, Informacao, NomePokemon, NumeroPokemon, TipoPokemon, ImagemPokemon, Botoes, ImagemPokebolaFundo } from "./styles";
+import { CardPokemon, Informacao, NomePokemon, NumeroPokemon, TipoPokemon, ImagemPokemon, DivBotoes, BotaoAcao, ImagemPokebolaFundo } from "./styles";
 import { tiposPokemon } from '../../constants/types';
 import { LabelType } from "../LabelType/LabelType";
 import fundoPokebola from '../../img/fundopokebola.png';
-import { useRequestPokemon } from "../../hooks/useRequestPokemon";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import PokeballLoader from "../PokeballLoader/PokeballLoader";
@@ -12,6 +12,30 @@ import PokeballLoader from "../PokeballLoader/PokeballLoader";
 
 export const Card = (props) => {
 
+    const location = useLocation();
+    let mostraCapturar = '';
+    let mostraExcluir = '';
+
+    switch(location.pathname) {
+        case '/':
+            mostraCapturar = true;
+            mostraExcluir = false;
+            break;
+        case '/pokedex':
+            mostraCapturar = false;
+            mostraExcluir = true;
+    }
+
+    console.log(location)
+    
+    // Navegação entre páginas
+    const navigate = useNavigate();
+
+    const goToDetails = () => {
+        navigate('/details');
+    }
+
+    // Dados do componente
     const [pokemon, setPokemon] = useState({})
 
     const getPokemon = () => {
@@ -54,10 +78,11 @@ export const Card = (props) => {
             <ImagemPokemon src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} />
             
 
-            <Botoes>
-                <button>Detalhes</button>
-                <button>Capturar</button>
-            </Botoes>
+            <DivBotoes>
+                <button onClick={goToDetails}>Detalhes</button>
+                <BotaoAcao mostrar={mostraCapturar}>Capturar</BotaoAcao>
+                <BotaoAcao mostrar={mostraExcluir}>Excluir</BotaoAcao>
+            </DivBotoes>
         </CardPokemon>}
         </div>
     )

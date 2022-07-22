@@ -10,7 +10,7 @@ export const DivCardsPokemons = styled.div`
 `;
 
 export const BodyHome = styled.div`
-    width: 100vw;
+    width: 100%;
     background-color: #5E5E5E;
     padding: 30px;
     & h1 {

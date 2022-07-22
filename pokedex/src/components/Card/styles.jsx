@@ -50,9 +50,13 @@ export const ImagemPokebolaFundo = styled.img`
     top: -4px;
 `
 
-export const Botoes = styled.div`
+export const DivBotoes = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
+`;
+
+export const BotaoAcao = styled.button`
+    display: ${(props) => props.mostrar ? 'block' : 'none'};
 `
