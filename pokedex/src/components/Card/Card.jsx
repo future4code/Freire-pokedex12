@@ -26,27 +26,16 @@ export const Card = (props) => {
     useEffect(() => {
         getPokemon()
     }, [props.url])
-    
-    console.log(pokemon)
-    console.log(pokemon.types)
 
     const lista = pokemon && pokemon.types
-
-    console.log(lista)
-
-    // Criar uma variavel para receber a lista pokemon.types
 
     const listaTipos = pokemon && lista && lista.map((tipo) => {
         return <LabelType tipo={tipo.type.name}/>
     })
 
-    console.log(listaTipos) 
-
     const tipoEscolhido = pokemon && lista && listaTipos && tiposPokemon.filter((tipo) => {
         return tipo.nome.toLowerCase() === lista[0].type.name;
     });
-
-    console.log(tipoEscolhido)
     
     
     return(
@@ -62,7 +51,7 @@ export const Card = (props) => {
             </Informacao>
 
             <ImagemPokebolaFundo src={fundoPokebola} />
-            <ImagemPokemon src={pokemon.sprites.other['official-artwork'].front_default} />
+            <ImagemPokemon src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} />
             
 
             <Botoes>
