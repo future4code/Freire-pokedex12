@@ -1,0 +1,1 @@
+export const URL_Base = 'https://pokeapi.co/api/v2/pokemon/';

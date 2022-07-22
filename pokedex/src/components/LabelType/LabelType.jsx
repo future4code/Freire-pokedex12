@@ -3,7 +3,7 @@ import { Etiqueta } from './styles';
 
 export const LabelType = (props) => {
     const tipoEscolhido = tiposPokemon.filter((tipo) => {
-        return tipo.nome === props.tipo;
+        return tipo.nome.toLowerCase() === props.tipo;
     });
 
     return (
