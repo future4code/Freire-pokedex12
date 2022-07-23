@@ -1,11 +1,11 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Pablo Carvalho de Leão Augusto
+- Walison Fillipe do Nascimento Muniz
+- Felipe Souza
 
-Link do Surge: www.link.com.br
+Link do Surge: freire-pokedex12.surge.sh
 
 O que funciona:
 - Item 1
