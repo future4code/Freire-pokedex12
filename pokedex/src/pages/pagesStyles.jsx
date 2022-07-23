@@ -16,4 +16,11 @@ export const BodyPage = styled.div`
     & h1 {
         color: white;
     }
+`;
+
+export const DivErrorPage = styled.div`
+    display: flex;
+    & img {
+        margin: auto;
+    }
 `

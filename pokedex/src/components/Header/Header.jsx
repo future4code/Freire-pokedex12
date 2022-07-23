@@ -39,7 +39,7 @@ export function Header() {
             mostraBotaoExcluir = false;
             break;
         default:
-            mostraBotaoTodos = false;
+            mostraBotaoTodos = true;
             mostraBotaoPokedex = true;
             mostraBotaoExcluir = false;
             break;
