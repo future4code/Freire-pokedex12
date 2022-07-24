@@ -7,6 +7,10 @@ export const DivCardsPokemons = styled.div`
     gap: 60px;
     flex-wrap: wrap;
     justify-content: center;
+    & > img {
+        height: 400px;
+        border-radius: 10px;
+    }
 `;
 
 export const BodyPage = styled.div`
