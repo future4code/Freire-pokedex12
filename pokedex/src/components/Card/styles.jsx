@@ -7,6 +7,7 @@ export const CardPokemon = styled.div`
     border-radius: 12px;
     padding: 15px;
     color: white;
+    text-shadow: 0px 0px 6px #000000;
     position: relative;
     display: flex;
     flex-direction: column;

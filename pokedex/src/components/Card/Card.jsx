@@ -7,9 +7,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import PokeballLoader from "../PokeballLoader/PokeballLoader";
 
-
-//numero={'01'} tipo={[{type: 'Steel'}, {type: 'Poison'}]} imagem={bulbaImagem}
-
 export const Card = (props) => {
 
     // Botão muda de acordo com a página
@@ -30,8 +27,8 @@ export const Card = (props) => {
     // Navegação entre páginas
     const navigate = useNavigate();
 
-    const goToDetails = () => {
-        navigate('/details');
+    const goToDetails = (id) => {
+        navigate(`/details/${id}`);
     }
 
     // Dados do componente
@@ -52,17 +49,18 @@ export const Card = (props) => {
     const lista = pokemon && pokemon.types
 
     const listaTipos = pokemon && lista && lista.map((tipo) => {
-        return <LabelType tipo={tipo.type.name}/>
+        return <LabelType tipo={tipo.type.name} key={tipo.type.name} />
     })
 
     const tipoEscolhido = pokemon && lista && listaTipos && tiposPokemon.filter((tipo) => {
         return tipo.nome.toLowerCase() === lista[0].type.name;
     });
     
-    
+    const carregouTudo = pokemon && lista && listaTipos && tipoEscolhido;
+
     return(
         <div>
-        {pokemon && lista && listaTipos && tipoEscolhido &&
+        {carregouTudo ?
         <CardPokemon corCard={tipoEscolhido[0].corCard}>
             <Informacao>
                 <NumeroPokemon>#{pokemon.id}</NumeroPokemon>
@@ -77,11 +75,13 @@ export const Card = (props) => {
             
 
             <DivBotoes>
-                <button onClick={goToDetails}>Detalhes</button>
+                <button onClick={() => goToDetails(pokemon.id)}>Detalhes</button>
                 <BotaoAcao mostrar={mostraCapturar} onClick={() => props.capturarPokemon(pokemon.id)}>Capturar</BotaoAcao>
                 <BotaoAcao mostrar={mostraExcluir} onClick={() => props.excluirPokemon(pokemon.id)}>Excluir</BotaoAcao>
             </DivBotoes>
-        </CardPokemon>}
+        </CardPokemon> :
+        <PokeballLoader/>
+        }
         </div>
     )
 }

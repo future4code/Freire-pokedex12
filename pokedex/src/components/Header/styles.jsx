@@ -9,6 +9,7 @@ export const Cabecalho = styled.div`
     padding: 10px 30px;
     & img {
         transform: scale(0.85);
+        height: 100px;
     }
     & div:first-child {
         justify-content: flex-start;

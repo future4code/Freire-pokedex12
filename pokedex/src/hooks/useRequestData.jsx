@@ -7,18 +7,16 @@ export const useRequestData = (url) => {
 
     const getData = () => {
         setIsLoading(true);
-        setTimeout(() => {
-            axios
-            .get(url)
-            .then((response) => {
-                setData(response.data);
-                setIsLoading(false)
-            })
-            .catch((error) => {
-                console.log(error.message);
-                setIsLoading(false);
-            });
-        }, 1000)
+        axios
+        .get(url)
+        .then((response) => {
+            setData(response.data);
+            setIsLoading(false)
+        })
+        .catch((error) => {
+            console.log(error.message);
+            setIsLoading(false);
+        });
         
     };
 

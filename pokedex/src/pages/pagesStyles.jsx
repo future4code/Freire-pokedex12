@@ -22,5 +22,7 @@ export const DivErrorPage = styled.div`
     display: flex;
     & img {
         margin: auto;
+        border-radius: 15px;
+
     }
 `
