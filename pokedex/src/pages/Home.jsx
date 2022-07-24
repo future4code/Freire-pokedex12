@@ -9,12 +9,12 @@ import { DivCardsPokemons, BodyPage } from "./pagesStyles";
 
 export default function Home () {
 
-    const {capturarPokemon} = useContext(PokedexContext)
+    const {pokedex, capturarPokemon} = useContext(PokedexContext)
     
     const [links, isLoadingLinks] = useRequestData(`${URL_Base}?limit=10`);
     
     const listaPokemons = links && links.results.map((item, indice) => {
-        return <Card key={indice} nome={item.name} url={item.url} capturarPokemon={capturarPokemon} />
+        return <Card key={indice} nome={item.name} url={item.url} capturarPokemon={capturarPokemon} pokedex={pokedex} />
     });
 
     // const pokemons = listaLinks && listaLinks.map((link) => {

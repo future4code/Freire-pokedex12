@@ -100,6 +100,7 @@ export const Card = (props) => {
                 <Button
                     variant="outlined"
                     onClick={() => props.capturarPokemon(pokemon.id)}
+                    disabled={props.pokedex.includes(pokemon.id)}
                     sx={{
                         display: mostraOuEsconde(mostraCapturar),
                         textTransform: 'capitalize',

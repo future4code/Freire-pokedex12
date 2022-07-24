@@ -10,7 +10,7 @@ export default function Pokedex () {
     const {pokedex, excluirPokemon} = useContext(PokedexContext);
 
     const meusPokemons = pokedex.map((pokemon) => {
-        return <Card key={pokemon} url={`https://pokeapi.co/api/v2/pokemon/${pokemon}`} excluirPokemon={excluirPokemon} />
+        return <Card key={pokemon} url={`https://pokeapi.co/api/v2/pokemon/${pokemon}`} excluirPokemon={excluirPokemon} pokedex={pokedex}/>
     })
 
     return <div>

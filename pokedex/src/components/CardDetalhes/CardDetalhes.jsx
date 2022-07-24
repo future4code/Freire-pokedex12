@@ -95,6 +95,7 @@ export const CardDetalhes = (props) => {
                         variant='contained'
                         color='error'
                         onClick={() => props.excluirPokemon(pokemonDetalhado.id)}
+                        disabled={!props.pokedex.includes(pokemonDetalhado.id)}
                         sx={{
                             textTransform: 'capitalize',
                             minWidth: '200px',

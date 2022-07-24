@@ -6,14 +6,14 @@ import { PokedexContext } from "../globalState/PokedexContext";
 
 export default function DetailsPage () {
 
-    const {excluirPokemon} = useContext(PokedexContext);
+    const {pokedex, excluirPokemon} = useContext(PokedexContext);
 
     return (
     <div>
         <Header/>
         <BodyPage>
             <h1>Detalhes</h1>
-            <CardDetalhes excluirPokemon={excluirPokemon} />
+            <CardDetalhes excluirPokemon={excluirPokemon} pokedex={pokedex} />
         </BodyPage>
     </div>
     )
