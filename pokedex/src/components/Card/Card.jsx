@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import PokeballLoader from "../PokeballLoader/PokeballLoader";
+import { Button } from "@mui/material";
 
 export const Card = (props) => {
 
@@ -22,6 +23,14 @@ export const Card = (props) => {
         case '/pokedex':
             mostraCapturar = false;
             mostraExcluir = true;
+    }
+    const mostraOuEsconde = (mostrar) => {
+        if (mostrar === true) {
+            return 'inline';
+        }
+        if (mostrar === false) {
+            return 'none';
+        }
     }
     
     // Navegação entre páginas
@@ -75,9 +84,49 @@ export const Card = (props) => {
             
 
             <DivBotoes>
-                <button onClick={() => goToDetails(pokemon.id)}>Detalhes</button>
-                <BotaoAcao mostrar={mostraCapturar} onClick={() => props.capturarPokemon(pokemon.id)}>Capturar</BotaoAcao>
-                <BotaoAcao mostrar={mostraExcluir} onClick={() => props.excluirPokemon(pokemon.id)}>Excluir</BotaoAcao>
+                <Button 
+                    variant="text"
+                    onClick={() => goToDetails(pokemon.id)}
+                    sx={{
+                        textTransform: 'capitalize',
+                        textDecoration: 'underline',
+                        minWidth: '100px',
+                        maxWidth: '100px',
+                        color: 'white',
+                        backgroundColor: '#ffffff22'
+                    }}
+                    >Detalhes
+                </Button>
+                <Button
+                    variant="outlined"
+                    onClick={() => props.capturarPokemon(pokemon.id)}
+                    sx={{
+                        display: mostraOuEsconde(mostraCapturar),
+                        textTransform: 'capitalize',
+                        minWidth: '100px',
+                        maxWidth: '100px',
+                        backgroundColor: 'white',
+                        color: 'black',
+                        border: 'none',
+                        '&:hover': {
+                            border: 'none',
+                            backgroundColor: '#eeeeee',
+                        }
+                    }}
+                    >Capturar!
+                </Button>
+                <Button
+                    variant="contained"
+                    onClick={() => props.excluirPokemon(pokemon.id)}
+                    color='error'
+                    sx={{
+                        display: mostraOuEsconde(mostraExcluir),
+                        textTransform: 'capitalize',
+                        minWidth: '100px',
+                        maxWidth: '100px',
+                    }}
+                    >Excluir
+                </Button>
             </DivBotoes>
         </CardPokemon> :
         <PokeballLoader/>
