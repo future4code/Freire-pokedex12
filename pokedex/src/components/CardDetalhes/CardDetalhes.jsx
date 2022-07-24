@@ -1,4 +1,4 @@
-import { CardDetalhesPokemon, ImagemPokebolaFundoDetalhes, ImagemPokemonDetalhes, MetadeCard, ListaSprites, Stats, Moves, LabelMove } from "./styles";
+import { CardDetalhesPokemon, ImagemPokebolaFundoDetalhes, ImagemPokemonDetalhes, MetadeCard, ListaSprites, Stats, DivInfoMoves, Moves, LabelMove, DivBotaoExcluir } from "./styles";
 import { Informacao, NumeroPokemon, NomePokemon, TipoPokemon } from '../Card/styles';
 import fundoPokebola from '../../img/fundo-pokeball-detalhes.png';
 import { tiposPokemon } from "../../constants/types";
@@ -8,6 +8,7 @@ import { URL_Base } from "../../constants/URL_Base";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import PokeballLoader from "../PokeballLoader/PokeballLoader";
+import { Button } from '@mui/material';
 
 export const CardDetalhes = (props) => {
 
@@ -76,17 +77,33 @@ export const CardDetalhes = (props) => {
                     </Stats>
                 </MetadeCard>
                 <MetadeCard>
-                    <Informacao>
-                        <NumeroPokemon>#{id}</NumeroPokemon>
-                        <NomePokemon>{pokemonDetalhado.name.charAt(0).toUpperCase()+pokemonDetalhado.name.slice(1)}</NomePokemon>
-                        <TipoPokemon>
-                            {listaTipos}
-                        </TipoPokemon>
-                    </Informacao>
-                    <Moves>
-                        <h2>Moves</h2>
-                        {listaMoves}
-                    </Moves>
+                    <DivInfoMoves>
+                        <Informacao>
+                            <NumeroPokemon>#{id}</NumeroPokemon>
+                            <NomePokemon>{pokemonDetalhado.name.charAt(0).toUpperCase()+pokemonDetalhado.name.slice(1)}</NomePokemon>
+                            <TipoPokemon>
+                                {listaTipos}
+                            </TipoPokemon>
+                        </Informacao>
+                        <Moves>
+                            <h2>Moves</h2>
+                            {listaMoves}
+                        </Moves>
+                    </DivInfoMoves>
+                    <DivBotaoExcluir>
+                        <Button
+                        variant='contained'
+                        color='error'
+                        onClick={() => props.excluirPokemon(pokemonDetalhado.id)}
+                        sx={{
+                            textTransform: 'capitalize',
+                            minWidth: '200px',
+                            maxWidth: '200px'
+                        }}
+                        >Excluir Pokémon
+                        </Button>
+                    </DivBotaoExcluir>
+                    
                 </MetadeCard>
             </CardDetalhesPokemon> :
             <PokeballLoader/>

@@ -10,9 +10,6 @@ export const CardDetalhesPokemon = styled.div`
     height: 500px;
     margin: 30px auto 0 auto;
     gap: 30px;
-    & > div:last-child {
-        flex-direction: column;
-    }
 `;
 
 export const MetadeCard = styled.div`
@@ -77,6 +74,13 @@ export const Stats = styled.div`
     }
 `;
 
+export const DivInfoMoves = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+`;
+
 export const Moves = styled.div`
     border-radius: 10px;
     border-top: 1px solid lightgray;
@@ -84,7 +88,7 @@ export const Moves = styled.div`
     background-color: rgba(212, 212, 212, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     height: 100%;
-    width: 50%;
+    width: 100%;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     padding: 20px;
@@ -102,7 +106,15 @@ export const LabelMove = styled.div`
     padding: 4px 8px;
     border-radius: 8px;
     border: 1px dashed rgba(255, 255, 255, 0.47);
-`
+`;
+
+export const DivBotaoExcluir = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 50px;
+`;
 
 export const ImagemPokemonDetalhes = styled.img`
     width: 250px;
