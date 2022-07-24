@@ -64,8 +64,15 @@ export const Stats = styled.div`
         list-style: none;
         & li {
             display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eeeeeec9;
             width: 100%;
             gap: 10px;
+        }
+        & li:last-child {
+            font-weight: bold;
+            margin-top: 10px;
+            border: none;
         }
     }
 `;

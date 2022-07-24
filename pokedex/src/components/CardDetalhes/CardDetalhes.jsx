@@ -71,7 +71,7 @@ export const CardDetalhes = (props) => {
                         <h2>Base Stats</h2>
                         <ul>
                             {listaStats}
-                            <li>Total <b>{totalStats}</b></li>
+                            <li><span>Total</span><span>{totalStats}</span></li>
                         </ul>
                     </Stats>
                 </MetadeCard>
