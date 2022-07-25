@@ -63,6 +63,7 @@ export function Header() {
             sx={{
                 display: mostraOuEsconde(mostraBotaoTodos),
                 textTransform: 'capitalize',
+                fontWeight: 'bold',
                 textDecoration: 'underline',
                 color: 'black',
                 minWidth: '200px',
@@ -78,6 +79,7 @@ export function Header() {
                 sx={{
                     display: mostraOuEsconde(mostraBotaoPokedex),
                     textTransform: 'capitalize',
+                    fontWeight: 'bold',
                     minWidth: '200px',
                     maxWidth: '200px'
                 }}

@@ -27,7 +27,7 @@ export const CardDetalhes = (props) => {
     }
 
     useEffect(() => {
-        getPokemonDetalhado()
+        getPokemonDetalhado();
     }, [id])
     
     const lista = pokemonDetalhado && pokemonDetalhado.types;
@@ -65,8 +65,8 @@ export const CardDetalhes = (props) => {
                 <ImagemPokemonDetalhes src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`} />
                 <MetadeCard>
                     <ListaSprites>
-                        <li><img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}/></li>
-                        <li><img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${id}.png`}/></li>
+                        <li><img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} alt={`Imagem ${pokemonDetalhado.name} frente`}/></li>
+                        <li><img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${id}.png`} alt={`Imagem ${pokemonDetalhado.name} costas`}/></li>
                     </ListaSprites>
                     <Stats>
                         <h2>Base Stats</h2>
