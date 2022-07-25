@@ -71,7 +71,7 @@ export function Header() {
             }}
             >&#10094; Todos Pokémons</Button>
             </ContainerBotao>
-            <img src={pokemonLogo} alt="Logo Pokemon" />
+            <img src={pokemonLogo} alt="Logo Pokemon" onClick={goToHome} />
             <ContainerBotao>
                 <Button
                 variant='contained'

@@ -16,6 +16,7 @@ export const Cabecalho = styled.div`
     & img {
         transform: scale(0.85);
         height: 100px;
+        cursor: pointer;
     }
     & div:first-child {
         justify-content: flex-start;
