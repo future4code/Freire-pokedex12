@@ -11,7 +11,7 @@ export default function Home () {
 
     const {pokedex, capturarPokemon} = useContext(PokedexContext)
     
-    const [links, isLoadingLinks] = useRequestData(`${URL_Base}?limit=10`);
+    const [links, isLoadingLinks] = useRequestData(`${URL_Base}?limit=20`);
     
     const listaPokemons = links && links.results.map((item, indice) => {
         return <Card key={indice} nome={item.name} url={item.url} capturarPokemon={capturarPokemon} pokedex={pokedex} />
