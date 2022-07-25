@@ -23,6 +23,8 @@ O que funciona:
 
 - Alertas customizados são exibidos quando o usuário captura ou exclui um pokémon.
 
+- A página de erro também foi customizada.
+
 - Os pokémons adicionados são guardados no Local Storage.
 
 O que não funciona: 
