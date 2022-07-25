@@ -69,7 +69,7 @@ export const Card = (props) => {
 
     return(
         <div>
-        {carregouTudo ?
+        {carregouTudo &&
         <CardPokemon corCard={tipoEscolhido[0].corCard}>
             <Informacao>
                 <NumeroPokemon>#{pokemon.id}</NumeroPokemon>
@@ -129,8 +129,7 @@ export const Card = (props) => {
                     >Excluir
                 </Button>
             </DivBotoes>
-        </CardPokemon> :
-        <PokeballLoader/>
+        </CardPokemon>
         }
         </div>
     )
