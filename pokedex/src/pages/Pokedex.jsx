@@ -13,6 +13,7 @@ export default function Pokedex () {
         return <Card key={pokemon} url={`https://pokeapi.co/api/v2/pokemon/${pokemon}`} excluirPokemon={excluirPokemon} pokedex={pokedex}/>
     })
 
+    document.title = 'Pokédex - Meus Pokémons'
     return <div>
         <Header/>
         <BodyPage>

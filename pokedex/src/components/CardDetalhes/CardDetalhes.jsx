@@ -55,8 +55,10 @@ export const CardDetalhes = (props) => {
         return <LabelMove key={move.move.name}>{move.move.name.charAt(0).toUpperCase()+move.move.name.slice(1)}</LabelMove>
     }) 
 
+    
     const carregouTudo = pokemonDetalhado && lista && listaTipos && tipoEscolhido;
     
+    document.title = carregouTudo && `Details - ${pokemonDetalhado.name.charAt(0).toUpperCase()+pokemonDetalhado.name.slice(1)}`
     return(
         <div>
             {carregouTudo ?

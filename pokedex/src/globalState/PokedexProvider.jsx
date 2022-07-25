@@ -44,7 +44,6 @@ export const PokedexProvider = (props) => {
         } else {
             setPokedex(JSON.parse(localStorage.getItem('pokedex')));
         }
-        console.log(JSON.parse(localStorage.getItem('pokedex')));
     }, [pokedex.length]);
 
     

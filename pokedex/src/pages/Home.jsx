@@ -21,7 +21,7 @@ export default function Home () {
     //     const [pokemon, isLoadingPokemon] = useRequestData(link);
     //     console.log(pokemon)
     // })
-
+    document.title = 'Home';
     return <div>
         <Header/>
         <BodyPage>
