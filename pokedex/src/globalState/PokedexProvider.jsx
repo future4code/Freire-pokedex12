@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { PokedexContext } from "./PokedexContext";
+import Swal from 'sweetalert2';
 
 export const PokedexProvider = (props) => {
 
@@ -11,6 +12,13 @@ export const PokedexProvider = (props) => {
         const pokedexString = JSON.stringify(pokedexAtualizada);
         localStorage.setItem('pokedex', pokedexString);
         setPokedex(JSON.parse(localStorage.getItem('pokedex')));
+        Swal.fire({
+            title: '<strong>Gotcha!</strong>',
+            html: 'O Pokémon foi adicionado a sua Pokédex',
+            timer: 1000,
+            showConfirmButton: false,
+            padding: '60px 10px',
+        });
     }
 
     const excluirPokemon = (pokemonID) => {
@@ -21,6 +29,13 @@ export const PokedexProvider = (props) => {
         const pokedexString = JSON.stringify(pokedexAtualizada);
         localStorage.setItem('pokedex', pokedexString);
         setPokedex(JSON.parse(localStorage.getItem('pokedex')));
+        Swal.fire({
+            title: '<strong>Oh, no!</strong>',
+            html: 'O Pokémon foi removido da sua Pokédex',
+            timer: 1000,
+            showConfirmButton: false,
+            padding: '60px 10px'
+        });
     }
 
     useEffect(() => {

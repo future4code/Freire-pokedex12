@@ -15,6 +15,7 @@ export const DivCardsPokemons = styled.div`
 
 export const BodyPage = styled.div`
     width: 100%;
+    min-height: 100vh;
     background-color: #5E5E5E;
     padding: 150px 30px 30px 40px;
     & h1 {
