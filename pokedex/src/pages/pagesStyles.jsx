@@ -23,6 +23,24 @@ export const BodyPage = styled.div`
     }
 `;
 
+export const DivPagination = styled.div`
+    opacity: 0;
+    width: 100%;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5) );
+    //box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+    /* backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); */
+    padding: 16px;
+    position: fixed;
+    bottom: 0px;
+    top: auto;
+    z-index: 10;
+    transition: 0.2s;
+    &:hover {
+        opacity: 1;
+    }
+`
+
 export const DivErrorPage = styled.div`
     display: flex;
     & img {
