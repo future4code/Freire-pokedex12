@@ -47,7 +47,7 @@ export default function Home () {
             count={numeroDePaginas} 
             boundaryCount={1}
             onChange={(event, page) => {
-              setPaginaAtual(page)
+              setPaginaAtual(page - 1)
             }}
             sx={{
               width: 'fit-content',
