@@ -27,8 +27,8 @@ O que funciona:
 
 - Os pokémons adicionados são guardados no Local Storage.
 
-O que não funciona: 
+- Ao passar o mouse na parte inferior da tela, a paginação fica visível.
 
-- Não foi feita a paginação, mas a página de detalhes pode acessar todos os pokémons, basta trocar o id do pokemon na URL da página.
+O que não funciona: 
 
 - A responsividade não foi implementada.
